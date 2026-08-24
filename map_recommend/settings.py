@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-jow-dfqbi@smrjej89!f45kv_xvppo=z4q%x6@0urm1z&2404c
 DEBUG = True
 
 # 本番環境では適切に設定すること
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

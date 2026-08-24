@@ -64,13 +64,14 @@ class LoginView(APIView):
         )
 
 
-class MeView(generics.RetrieveAPIView):
+class MeView(generics.RetrieveUpdateAPIView):
     """
     ログイン中ユーザー情報
-    GET /api/auth/me/
+    GET/PATCH /api/auth/me/
     Authorization: Token <token>
     """
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_object(self):
         return self.request.user

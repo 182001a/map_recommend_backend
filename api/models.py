@@ -32,7 +32,7 @@ class CourseSpotTemplate(models.Model):
     lat = models.FloatField()
     lng = models.FloatField()
     order_index = models.PositiveIntegerField(default=0, verbose_name="巡回順序")
-    estimated_stay_min = models.PositiveIntegerField(default=0, verbose_name="滞在予定時間(分)")
+    estimated_stay_min = models.PositiveIntegerField(default=0, verbose_name="滞在予定時間(分)") # これは不要かな？予定時間というより実際の滞在時間が欲しい
 
     class Meta:
         ordering = ['order_index']
